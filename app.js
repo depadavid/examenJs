@@ -24,3 +24,6 @@ function filtrarPorRangoIMDb(data, rangoMin, rangoMax) {
   return data.filter(pelicula => pelicula["#RANK"] >= rangoMin && pelicula["#RANK"] <= rangoMax);
 }
 
+function obtenerTitulos(data) {
+  return data.map(pelicula => pelicula["#TITLE"]);
+}
