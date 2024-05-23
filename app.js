@@ -34,3 +34,7 @@ function obtenerTitulosYAnos(data) {
 function obtenerIdentificadoresYTítulos(data) {
   return data.map(pelicula => ({ id: pelicula["#IMDB_ID"], titulo: pelicula["#TITLE"] }));
 }
+
+function obtenerURLsYTipos(data) {
+  return data.map(pelicula => ({ url: pelicula["#IMDB_URL"], tipo: pelicula["#TYPE"] }));
+}
