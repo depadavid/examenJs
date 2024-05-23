@@ -30,3 +30,7 @@ function obtenerTitulos(data) {
 function obtenerTitulosYAnos(data) {
   return data.map(pelicula => ({ titulo: pelicula["#TITLE"], ano: pelicula["#YEAR"] }));
 }
+
+function obtenerIdentificadoresYTítulos(data) {
+  return data.map(pelicula => ({ id: pelicula["#IMDB_ID"], titulo: pelicula["#TITLE"] }));
+}
