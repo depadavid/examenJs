@@ -16,3 +16,6 @@ function filtrarPorAno(data, ano) {
   return data.filter(pelicula => pelicula["#YEAR"] === ano);
 }
 
+function filtrarPorActor(data, actor) {
+  return data.filter(pelicula => pelicula["#ACTORS"].includes(actor));
+}
