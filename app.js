@@ -27,3 +27,6 @@ function filtrarPorRangoIMDb(data, rangoMin, rangoMax) {
 function obtenerTitulos(data) {
   return data.map(pelicula => pelicula["#TITLE"]);
 }
+function obtenerTitulosYAnos(data) {
+  return data.map(pelicula => ({ titulo: pelicula["#TITLE"], ano: pelicula["#YEAR"] }));
+}
