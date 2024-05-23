@@ -38,3 +38,10 @@ function obtenerIdentificadoresYTítulos(data) {
 function obtenerURLsYTipos(data) {
   return data.map(pelicula => ({ url: pelicula["#IMDB_URL"], tipo: pelicula["#TYPE"] }));
 }
+
+function obtenerDetallesPeliculas(data) {
+  return data.filter(pelicula => pelicula["#TYPE"] === "movie")
+             .map(pelicula => ({ titulo: pelicula["#TITLE"], ano: pelicula["#YEAR"], tipo: pelicula["#TYPE"] }));
+}
+
+
