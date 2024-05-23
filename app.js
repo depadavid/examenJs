@@ -1,0 +1,1 @@
+fetch('https://search.imdbot.workers.dev/?q=action')
