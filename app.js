@@ -19,3 +19,8 @@ function filtrarPorAno(data, ano) {
 function filtrarPorActor(data, actor) {
   return data.filter(pelicula => pelicula["#ACTORS"].includes(actor));
 }
+
+function filtrarPorRangoIMDb(data, rangoMin, rangoMax) {
+  return data.filter(pelicula => pelicula["#RANK"] >= rangoMin && pelicula["#RANK"] <= rangoMax);
+}
+
